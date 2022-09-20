@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
-import 'package:flutter_listview/Bagian/card1.dart';
-import 'package:flutter_listview/Bagian/card2.dart';
 import 'package:flutter_listview/Bagian/banner.dart';
 import 'package:flutter_listview/Bagian/header.dart';
-
+import 'package:flutter_listview/Bagian/card1.dart';
+import 'package:flutter_listview/Bagian/card2.dart';
 
 
 void main() {
@@ -50,7 +48,7 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
              body: ListView(children: const [
 
-        myHeader(),
+        Myheader(),
 
         Mybanner(),
 
@@ -58,10 +56,12 @@ class _MyHomePageState extends State<MyHomePage> {
         const SizedBox(height: 10.0,),
 
         Cardlist(),
+        Cardlist(),
        
 
         const SizedBox(height: 10.0,),
 
+        Cardlist2(),
         Cardlist2(),
     
              ]),

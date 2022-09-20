@@ -2,6 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter_listview/Bagian/card1.dart';
 import 'package:flutter_listview/Bagian/card2.dart';
+import 'package:flutter_listview/Bagian/banner.dart';
+import 'package:flutter_listview/Bagian/header.dart';
+
 
 
 void main() {
@@ -45,63 +48,11 @@ class _MyHomePageState extends State<MyHomePage> {
 
         title: Text(widget.title),
       ),
-             body: ListView(children: <Widget>[
-        Row(
-          children: [
-            Expanded(
-              child: Container(
-                padding: const EdgeInsets.all(18.0),
-                child:
-                    const Text("BERITA TERBARU", textAlign: TextAlign.center),
-              ),
-            ),
-            Expanded(
-              child: Container(
-                padding: const EdgeInsets.all(10.0),
-                child: const Text(
-                  "PERTANDINGAN HARI INI",
-                  textAlign: TextAlign.center,
-                ),
-              ),
-            ),
-          ],
-        ),
+             body: ListView(children: const [
 
-        Container(
-          decoration: BoxDecoration(border: Border.all(color: Colors.purple)),
-          padding: const EdgeInsets.all(0.0),
-          child: Column(
-            children: [
-              Container(
-                height: 200.0,
-                width: MediaQuery.of(context).size.width,
-                padding: const EdgeInsets.all(0.0),
-                child: Image.asset(
-                  'assets/MohSalah.jpg',
-                  fit: BoxFit.fill,
-                ),
-              ),
-              Container(
-                padding: const EdgeInsets.all(10.0),
-                child: const Text(
-                  "Berita utama Mohamed Salah",
-                  textAlign: TextAlign.center,
-                  style: TextStyle(
-                      fontSize: 20,
-                      color: Colors.black,
-                      fontWeight: FontWeight.bold),
-                ),
-              ),
-              Container(
-                padding: const EdgeInsets.all(21.0),
-                color: Colors.purple,
-                width: MediaQuery.of(context).size.width,
-                child: const Text("By Safira News"),
-              )
-            ],
-          ),
-        ),
-        
+        myHeader(),
+
+        Mybanner(),
 
 
         const SizedBox(height: 10.0,),
